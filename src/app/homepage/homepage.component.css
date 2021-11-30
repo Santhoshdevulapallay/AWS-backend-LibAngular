@@ -1,0 +1,43 @@
+mat-sidenav-container
+{
+
+    height:89vh
+}
+
+mat-sidenav,mat-sidenav-content
+{
+    padding: 16px;
+}
+mat-sidenav
+{
+    background-color: rgb(236, 137, 98);
+    width:250px;
+}
+/* mat-sidenav-content
+{
+    background-color: white;
+    color: black;
+} */
+div.a {
+    line-height: normal;
+    margin-left: 3%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  img
+  {
+      height:80px;
+      width: 100px;
+      border-radius: 50%;
+  }
+mat-toolbar
+{
+    height:100px;
+    /* background-color: rgb(236, 137, 98); */
+}
+span
+{
+    font-size: medium;
+    margin-left:35%
+}
+
+

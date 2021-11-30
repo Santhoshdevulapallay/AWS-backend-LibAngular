@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 80%;
+  }
+
+  h2,mat-option
+  {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color:white
+  }

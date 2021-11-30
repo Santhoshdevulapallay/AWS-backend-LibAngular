@@ -1,0 +1,87 @@
+<h2> Add New Book Details </h2><hr>
+
+<form [formGroup]="addbookform" (ngSubmit)='addBook()'>
+    <div class="row">
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>ISBN No</mat-label>
+                <input matInput type='text' formControlName="isbn"> 
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill">
+                <mat-label>Language</mat-label>
+                <mat-select formControlName="language">
+                    <mat-option *ngFor="let lang of languages" [value]="lang">{{lang}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill">
+                <mat-label>Genre</mat-label>
+                <mat-select formControlName="genre">
+                    <mat-option *ngFor="let ge of genres" [value]="ge">{{ge}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>Description</mat-label>
+                <input matInput type='text' formControlName="description">
+            </mat-form-field>
+        </div>
+    </div>
+    <!-- 2nd row -->
+    <div class="row">
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>Title</mat-label>
+                <input matInput type='text' formControlName="title">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>Authors</mat-label>
+                <input matInput type='text' formControlName="authors">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>Publisher</mat-label>
+                <input matInput type='text' formControlName="publisher">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>Publication Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="pubdate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </div>
+    <!-- 3rd row -->
+    <div class="row">
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>Price</mat-label>
+                <input matInput type='number' min=0 formControlName="price">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>Edition</mat-label>
+                <input matInput type='text' formControlName="edition">
+            </mat-form-field>
+        </div>
+        <!-- <div class="col-sm-3">
+            <mat-form-field appearance="fill">
+                <mat-label>upload cover page</mat-label>
+                <input type='file'>
+            </mat-form-field>
+        </div> -->
+        <div class="col-sm-3">
+            <button mat-raised-button type="submit" color='accent'>Add</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,11 @@
+mat-list-item
+{
+    font-size: medium;
+    font-family: cursive;
+    font-style: italic;
+   
+}
+#pointer
+{
+    cursor: pointer;
+}

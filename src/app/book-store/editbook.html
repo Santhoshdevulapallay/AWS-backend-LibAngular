@@ -1,0 +1,45 @@
+<h2>Edit <b>{{data.title}}</b>  Book Details  <hr>
+
+<form [formGroup]="editdetailsform" (ngSubmit)="editDetails()">
+    <div class="row">
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>Title</mat-label>
+                <input matInput type='text' formControlName="title"> 
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>ISBN No</mat-label>
+                <input matInput type='text' formControlName="isbn"> 
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill">
+                <mat-label>Language</mat-label>
+                <mat-select formControlName="language">
+                    <mat-option *ngFor="let lang of languages" [value]="lang">{{lang}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill">
+                <mat-label>Genre</mat-label>
+                <mat-select formControlName="genre">
+                    <mat-option *ngFor="let ge of genres" [value]="ge">{{ge}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill" >
+                <mat-label>Description</mat-label>
+                <input matInput type='text' formControlName="description">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+            <button mat-raised-button color="accent" type="submit">Edit </button>
+        </div>
+    </div>
+</form>

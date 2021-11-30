@@ -1,0 +1,17 @@
+.example-card {
+    max-width: 250px;
+    max-height: 100px;
+    margin-bottom: 300px;
+  }
+  
+  
+  h2,h3
+  {
+      font-family: cursive;
+  }
+  #coverimg
+  {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+  }

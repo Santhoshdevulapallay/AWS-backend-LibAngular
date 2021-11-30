@@ -1,0 +1,36 @@
+
+<mat-toolbar color="primary">
+    <button mat-icon-button color="accent" (click)="opened=!opened">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <img src="/assets/img/posoco.png" class='iconDetails'  alt="posoco">
+    <div class="a">  SOUTHERN REGIONAL LOAD DESPATCH CENTER BANGALORE-560009.<br>
+        <p>Knowledge Hub(Library) Portal </p></div>
+</mat-toolbar>
+
+<!-- <div class="backimage">
+    <div style="margin-left: 10%;">
+        <img src="/assets/img/posoco.png" class='iconDetails'  alt="posoco">
+    </div>
+    <div class="inner-container">
+        <h2>POWER SYSTEM OPERATION CORPORATION LIMITED </h2>
+        <span class="title-small" style="font-size:.9em">(A Government of India Enterprise)
+            CIN: U40105DL2009GOI188682</span>
+        <h2>SOUTHERN REGION LOAD DESPATCH CENTRE ,29,RACE COURSE CROSS ROAD,BANGALORE-560009 </h2>
+        <h2 class="square">SR POOL ACCOUNTS MANAGEMENT SYSTEM</h2>
+    </div>
+   
+</div> -->
+<mat-sidenav-container>
+
+    <mat-sidenav #sideNav [(opened)]="opened" mode="side">
+       <app-side-nav></app-side-nav>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
